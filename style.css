@@ -150,8 +150,12 @@ body {
 .scroll-indicator {
     position: absolute;
     bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     opacity: 0;
     animation: fadeInUp 1s ease 1.1s forwards;
@@ -161,7 +165,6 @@ body {
     font-size: 12px;
     letter-spacing: 2px;
     color: #999;
-    display: block;
     margin-bottom: 10px;
 }
 
@@ -434,6 +437,7 @@ section {
     .works-grid {
         grid-template-columns: 1fr;
     }
+    
 }
 
 @media (max-width: 480px) {
@@ -456,4 +460,5 @@ section {
     .work-content {
         padding: 20px;
     }
+    
 }
