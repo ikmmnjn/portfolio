@@ -120,30 +120,7 @@ skillTags.forEach((tag, index) => {
     skillObserver.observe(tag);
 });
 
-// 타이핑 효과 (선택사항)
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
-// 페이지 로드 시 타이핑 효과 적용 (선택사항)
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        typeWriter(heroTitle, originalText, 150);
-    }
-});
+// (타이핑 효과 제거) 줄 단위 페이드인은 CSS 애니메이션으로 처리
 
 // 스크롤 진행률 표시 (선택사항)
 function updateScrollProgress() {
